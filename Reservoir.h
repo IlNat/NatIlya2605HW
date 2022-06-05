@@ -7,11 +7,12 @@ class Reservoir
 	string nameOfReservoir;
 	double volumeOfReservoir;
 	double surfaceArea;
+	string operator=(string name) { nameOfReservoir = name; return nameOfReservoir; }
 public:
 	Reservoir();
-	Reservoir(string name, double length, double width, double depth);
+	Reservoir(const string* name, double length, double width, double depth);
 
-	void setNameOfReservoir(string nameOfReservoir);
+	void setNameOfReservoir(const string* nameOfReservoir);
 	void setVolumeOfReservoir(double length, double width, double depth);
 	void setSurfaceArea(double length, double width);
 	string getNameOfReservoir()

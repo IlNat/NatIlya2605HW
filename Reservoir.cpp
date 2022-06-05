@@ -11,14 +11,14 @@ Reservoir::Reservoir()
 }
 
 
-Reservoir::Reservoir(string name, double length, double width, double depth)
+Reservoir::Reservoir(const string* name, double length, double width, double depth)
 {
 	setNameOfReservoir(name);
 	setVolumeOfReservoir(length, width, depth);
 	setSurfaceArea(length, width);
 }
 
-void Reservoir::setNameOfReservoir(string name)
+void Reservoir::setNameOfReservoir(const string* name)
 {
 	nameOfReservoir = name;
 }
