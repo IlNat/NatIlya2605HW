@@ -9,9 +9,9 @@ class Reservoir
 	double surfaceArea; // Площадь водяной поверхности водоёма.
 public:
 	Reservoir(); // Конструктор  поп умолчанию.
-	Reservoir(string* name, double length, double width, double depth); // Конструктор с параметрами.
+	Reservoir(string name, double length, double width, double depth); // Конструктор с параметрами.
 
-	void setNameOfReservoir(string* nameOfReservoir); // Установка имени водоёма.
+	void setNameOfReservoir(string nameOfReservoir); // Установка имени водоёма.
 	void setVolumeOfReservoir(double length, double width, double depth); // Установка объёма водоёма.
 	void setSurfaceArea(double length, double width); // Установка площади поверхности водоёма.
 	string getNameOfReservoir() // Возвращает имя водоёма.
