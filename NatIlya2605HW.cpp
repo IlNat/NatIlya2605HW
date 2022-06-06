@@ -12,7 +12,7 @@ int main()
     cout << "Hello World!\n";
     cout << "Добро пожаловать в программу заполнения информации об водоёме.\n";
     int amountOfReservoires;
-    bool isCreated;
+    bool isCreated = false;
     cout << "Введите количество водоёмов: ";
     cin >> amountOfReservoires;
 
@@ -35,6 +35,9 @@ int main()
         cin >> createdDepths[i];
     }
 
-    Reservoir res(createdNames, createdLengths, createdWidths, createdDepths);
-    //Reservoir *res = new Reservoir[amountOfReservoires];
+    /*Reservoir res();
+    Reservoir* res = new Reservoir[amountOfReservoires]
+    {
+        createdNames, createdLengths, createdWidths, createdDepths
+    };*/
 }

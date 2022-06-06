@@ -12,15 +12,15 @@ Reservoir::Reservoir()
 }
 
 //Конструктор с параметрами.
-Reservoir::Reservoir(string* name, double length, double width, double depth)
+Reservoir::Reservoir(string name, double length, double width, double depth)
 {
 	setNameOfReservoir(name);
 	setVolumeOfReservoir(length, width, depth);
 	setSurfaceArea(length, width);
 }
 
-//Установка имени водоёма(не работает).
-void Reservoir::setNameOfReservoir(string* name)
+//Установка имени водоёма.
+void Reservoir::setNameOfReservoir(string name)
 {
 	nameOfReservoir = name;
 }
