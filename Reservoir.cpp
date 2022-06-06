@@ -3,6 +3,7 @@
 #include "Reservoir.h"
 using namespace std;
 
+//Конструктор по умолчанию.
 Reservoir::Reservoir()
 {
 	nameOfReservoir = "";
@@ -10,24 +11,27 @@ Reservoir::Reservoir()
 	surfaceArea = 0;
 }
 
-
-Reservoir::Reservoir(const string* name, double length, double width, double depth)
+//Конструктор с параметрами.
+Reservoir::Reservoir(string* name, double length, double width, double depth)
 {
 	setNameOfReservoir(name);
 	setVolumeOfReservoir(length, width, depth);
 	setSurfaceArea(length, width);
 }
 
-void Reservoir::setNameOfReservoir(const string* name)
+//Установка имени водоёма(не работает).
+void Reservoir::setNameOfReservoir(string* name)
 {
 	nameOfReservoir = name;
 }
 
+//Установка объёма водоёма.
 void Reservoir::setVolumeOfReservoir(double length, double width, double depth)
 {
 	volumeOfReservoir = length * width * depth;
 }
 
+//Установка площади водяной поверхности водоёма.
 void Reservoir::setSurfaceArea(double length, double width)
 {
 	surfaceArea = length * width;

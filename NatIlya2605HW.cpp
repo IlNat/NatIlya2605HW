@@ -35,8 +35,8 @@ int main()
         cin >> width[i];
         cout << "Введите максимальную глубину водоёма(приблизительную): ";
         cin >> depth[i];
-        Reservoir res(name, length, width, depth);
+        
     }
-    
+    Reservoir res(name, length, width, depth);
     
 }

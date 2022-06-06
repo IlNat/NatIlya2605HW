@@ -4,28 +4,27 @@ using namespace std;
 
 class Reservoir
 {
-	string nameOfReservoir;
-	double volumeOfReservoir;
-	double surfaceArea;
-	string operator=(string name) { nameOfReservoir = name; return nameOfReservoir; }
+	string nameOfReservoir; // Имя водоёма.
+	double volumeOfReservoir; // Объём водоёма.
+	double surfaceArea; // Площадь водяной поверхности водоёма.
 public:
-	Reservoir();
-	Reservoir(const string* name, double length, double width, double depth);
+	Reservoir(); // Конструктор  поп умолчанию.
+	Reservoir(string* name, double length, double width, double depth); // Конструктор с параметрами.
 
-	void setNameOfReservoir(const string* nameOfReservoir);
-	void setVolumeOfReservoir(double length, double width, double depth);
-	void setSurfaceArea(double length, double width);
-	string getNameOfReservoir()
+	void setNameOfReservoir(string* nameOfReservoir); // Установка имени водоёма.
+	void setVolumeOfReservoir(double length, double width, double depth); // Установка объёма водоёма.
+	void setSurfaceArea(double length, double width); // Установка площади поверхности водоёма.
+	string getNameOfReservoir() // Возвращает имя водоёма.
 	{
 		return nameOfReservoir;
 	}
-	double getSurfaceArea()
-	{
-		return surfaceArea;
-	}
-	double getVolumeOfResorvoir()
+	double getVolumeOfResorvoir() // Возвращает объём водоёма.
 	{
 		return volumeOfReservoir;
 	}
+	double getSurfaceArea() // Возвращает площадь водяной поверхности водоёма.
+	{
+		return surfaceArea;
+	}	
 };
 
