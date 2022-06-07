@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include <string>
 using namespace std;
 
@@ -8,12 +9,14 @@ class Reservoir
 	double volumeOfReservoir; // Объём водоёма.
 	double surfaceArea; // Площадь водяной поверхности водоёма.
 public:
-	Reservoir(); // Конструктор  поп умолчанию.
-	Reservoir(string name, double length, double width, double depth); // Конструктор с параметрами.
+	// Конструктор с параметрами.
+	Reservoir(string name, double length, double width, double depth) : nameOfReservoir{ name }, volumeOfReservoir{ length * width * depth }, surfaceArea{ length * width } 
+	{
+		cout << "Водоём " << getNameOfReservoir() << ":\n";
+		cout << "Объём водоёма: " << getVolumeOfResorvoir() << '\n';
+		cout << "Площадь поверхности: " << getSurfaceArea() << '\n';
+	} 
 
-	void setNameOfReservoir(string nameOfReservoir); // Установка имени водоёма.
-	void setVolumeOfReservoir(double length, double width, double depth); // Установка объёма водоёма.
-	void setSurfaceArea(double length, double width); // Установка площади поверхности водоёма.
 	string getNameOfReservoir() // Возвращает имя водоёма.
 	{
 		return nameOfReservoir;

@@ -10,34 +10,30 @@ int main()
     SetConsoleOutputCP(1251);
 
     cout << "Hello World!\n";
-    cout << "Добро пожаловать в программу заполнения информации об водоёме.\n";
-    int amountOfReservoires;
-    bool isCreated = false;
-    cout << "Введите количество водоёмов: ";
-    cin >> amountOfReservoires;
+    cout << "Добро пожаловать в программу заполнения информации об водоёмах.\n";
+    string name1; 
+    double length1, width1, depth1;
+    string name2; 
+    double length2, width2, depth2;
+    //Ввод данных.
+    cout << "Введите название первого водоёма: ";
+    cin >> name1;   
+    cout << "Введите длину первого водоёма: ";
+    cin >> length1;    
+    cout << "Введите ширину первого водоёма(приблизительную): ";
+    cin >> width1;    
+    cout << "Введите маскимальную глубину первого водоёма(приблизительную): ";
+    cin >> depth1;
+    cout << "Введите название второго водоёма: ";
+    cin >> name2;
+    cout << "Введите длину второго водоёма(приблизительную): ";
+    cin >> length2;
+    cout << "Введите ширину второго водоёма(приблизительную): ";
+    cin >> width2;
+    cout << "Введите максимальную глубину второго водоёма(приблизительную): ";
+    cin >> depth2;   
 
-    if (!isCreated)
-    {
-        isCreated = true;
-    }
-    string* createdNames = new string[amountOfReservoires];
-    double* createdLengths = new double[amountOfReservoires]; 
-    double* createdWidths = new double[amountOfReservoires];
-    double* createdDepths = new double[amountOfReservoires];
-    for (int i = 0; i < amountOfReservoires; i++) {
-        cout << "Введите название " << i << "-го водоёма: ";
-        cin >> createdNames[i];
-        cout << "Введите длину " << i << "-го водоёма(приблизительную): ";
-        cin >> createdLengths[i];
-        cout << "Введите ширину " << i << "-го водоёма(приблизительную): ";
-        cin >> createdWidths[i];
-        cout << "Введите максимальную глубину " << i << "-го водоёма(приблизительную): ";
-        cin >> createdDepths[i];
-    }
-
-    /*Reservoir res();
-    Reservoir* res = new Reservoir[amountOfReservoires]
-    {
-        createdNames, createdLengths, createdWidths, createdDepths
-    };*/
+    //Обработка данных в конструкторах.
+    Reservoir reservoir1(name1, length1, width1, depth1);
+    Reservoir reservoir2(name2, length2, width2, depth2);    
 }
